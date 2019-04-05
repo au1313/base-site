@@ -4,7 +4,7 @@ const fs = require("fs");
 const pa11y = require("pa11y");
 
 const file = __dirname + "/../../styleguide/menu.json";
-const base_domain = "https://base.wayne.local";
+const base_domain = "http://base.localhost";
 let urls = [];
 
 const validator_options = {
