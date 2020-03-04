@@ -47,5 +47,8 @@
     "stylelint-config-standard": "^19.0.0",
     "tailwindcss": "^1.1.4",
     "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "alpinejs": "^2.0.2"
   }
 }
