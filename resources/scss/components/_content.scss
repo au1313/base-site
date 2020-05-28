@@ -29,22 +29,34 @@
     }
 
     blockquote {
-        @apply .pt-12 .px-6 .pb-8 .my-10 .relative .text-center .text-xl .font-bold;
+        @apply .px-6 .py-12;
+    }
+
+    blockquote p {
+        @apply .relative .text-center .text-xl .font-bold;
 
         @screen mt {
             @apply .px-20;
         }
     }
 
-    blockquote::before,
-    blockquote::after {
+    blockquote p::before,
+    blockquote p::after {
         @apply .block .px-6 .absolute .text-4xl;
 
         content: '';
         font-family: Arial Black, sans-serif;
     }
 
-    blockquote::before {
+    blockquote p:first-of-type {
+        @apply .pt-10;
+    }
+
+    blockquote p:last-of-type {
+        @apply .pb-12;
+    }
+
+    blockquote p:first-of-type::before {
         @apply .top-0;
 
         content: "\201C";
@@ -53,13 +65,17 @@
         transform: translateX(-50%);
     }
 
-    blockquote::after {
+    blockquote p:last-of-type::after {
         @apply .bottom-0 .leading-none;
 
         content: "\201D";
         bottom: -1rem;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    blockquote cite {
+        @apply .text-base .not-italic .font-normal .mb-8 .block .text-center;
     }
 
     // Tailwind preflight sets images to block
